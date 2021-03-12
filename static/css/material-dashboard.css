@@ -15715,6 +15715,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 .fixed-plugin .dropdown .dropdown-menu .adjustments-line .bootstrap-switch {
   position: absolute;
   right: 10px !important;
+  top: 10px;
 }
 
 .fixed-plugin .dropdown .dropdown-menu .adjustments-line label {

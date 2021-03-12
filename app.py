@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for, request
 from redis import Redis
 
 
@@ -7,9 +7,17 @@ app = Flask(__name__)
 redis = Redis(host='redis', port=6379)
 
 
-# @app.route('/login')
-# def login():
-#     return render_template('login.html')
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/autenticate', methods=['POST', ])
+def autenticate():
+    if 'admin' == request.form['usuario']:
+        return redirect(url_for('index'))
+    else:
+        return redirect(url_for('login'))
+
 
 
 @app.route('/index')

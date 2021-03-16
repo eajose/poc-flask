@@ -8,5 +8,17 @@ services:
             - .:/app
         depends_on:
             - redis
+            - db
     redis:
         image: redis
+    db:
+        image: mysql:8.0.19
+        command: '--default-authentication-plugin=mysql_native_password'
+        restart: always
+        environment:
+            - MYSQL_DATABASE=example
+            - MYSQL_ROOT_PASSWORD=password
+        volumes:
+            - db-data:/var/lib/mysql
+volumes:
+    db-data:

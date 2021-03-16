@@ -5277,9 +5277,10 @@ tbody.collapse.show {
 }
 
 .alert-danger {
-  color: #7f231c;
+  color: #beafae;
   background-color: #fdd9d7;
   border-color: #fccac7;
+  
 }
 
 .alert-danger hr {
@@ -19741,6 +19742,16 @@ Copyright (c) 2015 Daniel Eden
     font-size: 1rem;
     margin: 0;
   }
+}
+
+.alert.success {
+  background-color: green;
+  opacity: 0.3 !important;
+}
+
+.alert.error {
+  background-color: red;
+  opacity: 0.3 !important;
 }
 
 @media (min-width: 992px) {
